@@ -1,7 +1,7 @@
-cmake_minimum_required(VERSION 3.25)
-project(FirstSample LANGUAGES CXX)
+﻿cmake_minimum_required(VERSION 3.25)
+project(BasicTemplate LANGUAGES CXX)
 
-include(qt.cmake)
+include(qt_util)
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -13,24 +13,24 @@ set(PROJECT_SOURCES
     main.cpp
 )
 
-qt_add_executable(FirstSample ${PROJECT_SOURCES})
+qt_add_executable(BasicTemplate ${PROJECT_SOURCES})
 
-qt_add_qml_module(FirstSample
-    URI firstsample
+qt_add_qml_module(BasicTemplate
+    URI BasicTemplate
     VERSION 1.0
     RESOURCE_PREFIX "/"
     QML_FILES
         main.qml
 )
 
-set_target_properties(FirstSample
+set_target_properties(BasicTemplate
     PROPERTIES
         WIN32_EXECUTABLE TRUE
 )
 
-target_link_libraries(FirstSample
+target_link_libraries(BasicTemplate
     PUBLIC
         Qt6::Quick
 )
 
-qt_import_qml_plugins(FirstSample)
+qt_import_qml_plugins(BasicTemplate)

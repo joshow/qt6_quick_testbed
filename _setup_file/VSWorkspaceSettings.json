@@ -1,0 +1,14 @@
+{
+  "CMakeTargetsViewExcludedItems": [
+    "CMakeProject:QtQuickTestBed|CMakeFolder:Tools",
+
+    "CMakeTarget:all_qmllint",
+    "CMakeTarget:*|CMakeFolder:Users|CMakeFolder:*|CMakeFolder:out",
+
+    "CMakeFolder:QtInternalTargets",
+    "CMakeFolder:Qt",
+    "CMakeFolder:QmlLinter",
+
+    "CMakeFile:Qt6CoreMacros.cmake"
+  ]
+}
