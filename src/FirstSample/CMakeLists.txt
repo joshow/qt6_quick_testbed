@@ -18,9 +18,9 @@ qt_add_executable(FirstSample ${PROJECT_SOURCES})
 qt_add_qml_module(FirstSample
     URI firstsample
     VERSION 1.0
-    RESOURCE_PREFIX "/"
     QML_FILES
         main.qml
+        AudioInfoBox.qml
 )
 
 set_target_properties(FirstSample

@@ -1,17 +1,69 @@
-﻿import QtQuick 2.9
-import QtQuick.Window 2.2
+﻿import QtQuick
+import QtQuick.Window
 
 Window {
-    visible: true
+    id: root;
+
     width: 640
     height: 480
-    title: "FirstSample"
-    Text {
-        anchors.fill: parent
-        horizontalAlignment: Text.AlignHCenter
-        verticalAlignment: Text.AlignVCenter
-        font.bold: true
-        font.pointSize: 42
-        text: "Hello World!"
+
+    visible: true
+
+    title: qsTr("Song Player")
+
+    Rectangle {
+        id: tapbar
+
+        anchors  {
+            top: parent.top
+            left: parent.left
+            right: parent.right
+        }
+
+        height: 50
+        color: "#5F8575"
+    }
+
+    Rectangle {
+        id: mainSection
+
+        anchors {
+            top: tapbar.bottom
+            bottom: bottombar.top
+            left: parent.left
+            right: parent.right
+        }
+
+        color: "#1e1e1e"
+
+        AudioInfoBox {
+            id: firstSong
+
+            anchors {
+                verticalCenter: parent.verticalCenter
+                left: parent.left
+                right: parent.right
+                margins: 20
+            }
+
+            songIndex: 0
+            title: "This my qml song"
+            authorName: "Wolfgang Amadeus Mozart"
+            imageColor: "red"
+        }
+    }
+
+    Rectangle {
+        id: bottombar
+
+        anchors  {
+            bottom: parent.bottom
+            left: parent.left
+            right: parent.right
+        }
+
+        height: 100
+        color: "#333333"
     }
 }
+
