@@ -16,7 +16,7 @@ set(PROJECT_SOURCES
 qt_add_executable(FirstSample ${PROJECT_SOURCES})
 
 qt_add_qml_module(FirstSample
-    URI firstsample
+    URI FirstSample
     VERSION 1.0
     QML_FILES
         main.qml
